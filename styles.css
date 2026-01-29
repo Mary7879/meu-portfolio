@@ -1,0 +1,246 @@
+:root {
+    --primary:   #ff69b4;
+    --secondary: #e91e63;
+    --accent:    #00ffcc;
+    --bg:        #121212;
+    --text:      #ffffff;
+    --transition: all 0.4s ease;
+}
+
+body.light-mode {
+    --bg:   #f5faff;
+    --text: #1a1a1a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* Toggle modo */
+.mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent);
+    color: #000;
+    padding: 10px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: var(--transition);
+}
+
+.mode-toggle:hover {
+    transform: scale(1.05);
+}
+
+/* Hero */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('https://source.unsplash.com/random/1920x1080/?abstract,tech') center/cover;
+    opacity: 0.12;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+.profile-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 5px solid var(--accent);
+    box-shadow: 0 0 40px rgba(0,255,204,0.5);
+    margin-bottom: 25px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.profile-photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 60px rgba(0,255,204,0.8);
+}
+
+.animated-title {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.animated-title span {
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.animated-title:hover span {
+    animation: bounce 0.6s alternate infinite;
+    color: var(--accent);
+}
+
+@keyframes bounce {
+    to { transform: translateY(-10px); }
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+/* Seções */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 2.6rem;
+    margin-bottom: 50px;
+    color: var(--accent);
+    text-shadow: 0 0 12px rgba(0,255,204,0.3);
+}
+
+/* Grids */
+.skills-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill, .project {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: var(--transition);
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,255,204,0.25);
+}
+
+/* Formulário */
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+input, textarea, button {
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.1);
+    color: var(--text);
+    font-size: 1.05rem;
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 18px var(--accent);
+    background: rgba(255,255,255,0.15);
+}
+
+button {
+    background: var(--accent);
+    color: #000;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00cc99;
+    transform: translateY(-3px);
+}
+
+.form-status {
+    font-weight: 600;
+    min-height: 24px;
+}
+
+.whatsapp-text {
+    margin-top: 40px;
+    font-size: 1.1rem;
+}
+
+.whatsapp-link {
+    color: var(--accent);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.whatsapp-link:hover {
+    color: #00cc99;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.2);
+}
+
+.whatsapp-footer {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 28px;
+    background: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.whatsapp-footer:hover {
+    background: #20b858;
+    transform: translateY(-4px);
+}
+
+/* Partículas */
+#particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosemary - Desenvolvedora Full-Stack</title>
+
+    <!-- Fonte Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Seu CSS separado -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Botão toggle modo claro/escuro -->
+    <div class="mode-toggle" onclick="toggleMode()">Claro / Escuro</div>
+
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-content">
+            <img 
+                src="img.jpg"
+                alt="foto.png.jpg"
+                class="profile-photo"
+            >
+            <h1 class="animated-title">
+                <span>R</span><span>o</span><span>s</span><span>e</span><span>m</span><span>a</span><span>r</span><span>y</span>
+                <span> </span>
+                <span>s</span><span>i</span><span>l</span><span>v</span><span>a</span></h1>
+            <p class="subtitle">Formada em Análise e Desenvolvimento de Sistemas</p>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+            Desenvolvedora full-stack apaixonada por criar soluções modernas e funcionais.<br><br>
+            Com graduação em  Análise e Desenvolvimento de Sistemas e pós-graduação em engenharia de software,
+             gosto de unir código limpo, design intuitivo e boas práticas de desenvolvimento.<br><br>
+            Atualmente focada em tecnologias como React, Node.js, JavaScript/TypeScript e bancos de dados relacionais e não relacionais.
+        </p>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+        <h2>Habilidades</h2>
+        <div class="skills-grid">
+            <div class="skill">HTML5 • CSS3 • JavaScript</div>
+            <div class="skill">React • Next.js</div>
+            <div class="skill">Node.js • Express</div>
+            <div class="skill">SQL • MongoDB</div>
+            <div class="skill">Git • GitHub</div>
+            <div class="skill">UI/UX • Figma</div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>Loja de Doces Online</h3>
+                <p>E-commerce completo com carrinho, integração PagSeguro e armazenamento Firebase.</p>
+            </div>
+            <div class="project">
+                <h3>Portfolio Animado</h3>
+                <p>Site pessoal interativo com partículas, animações e modo claro/escuro.</p>
+            </div>
+            <div class="project">
+                <h3>Sistema de Gerenciamento</h3>
+                <p>Aplicação full-stack para controle de tarefas/estoque com autenticação.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+
+        <form id="contact-form">
+            <input type="text"   name="user_name"   placeholder="Seu Nome" required>
+            <input type="email"  name="user_email"  placeholder="Seu Email" required>
+            <textarea name="message" placeholder="Sua mensagem..." rows="5" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+
+        <p id="form-status" class="form-status"></p>
+
+        <p class="whatsapp-text">
+            Ou fale comigo diretamente no WhatsApp:  
+            <a href="https://wa.me/5538999444481?text=Oi%20Rosemary!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar%20sobre%20projetos%20ou%20oportunidades.%20%F0%9F%8C%9F" 
+               target="_blank" class="whatsapp-link">
+                Abrir WhatsApp
+            </a>
+        </p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>© 2026 Rosemary - Desenvolvedora Full-Stack</p>
+        <a href="https://wa.me/5538999444481?text=Oi%20Rosemary!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar%20sobre%20projetos%20ou%20oportunidades.%20%F0%9F%8C%9F" 
+           target="_blank" class="whatsapp-footer">
+            Falar no WhatsApp
+        </a>
+    </footer>
+
+    <!-- Partículas de fundo -->
+    <div id="particles"></div>
+
+    <!-- Bibliotecas -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <script>
+        // =============================================
+        // EmailJS - Configuração (substitua os valores)
+        // =============================================
+        emailjs.init({
+            publicKey: "SUA_PUBLIC_KEY_AQUI",
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const status = document.getElementById('form-status');
+            status.textContent = 'Enviando...';
+            status.style.color = 'var(--accent-color)';
+
+            emailjs.sendForm(
+                'SEU_SERVICE_ID_AQUI',     // ← seu Service ID
+                'SEU_TEMPLATE_ID_AQUI',    // ← seu Template ID
+                this
+            )
+            .then(() => {
+                status.textContent = 'Mensagem enviada com sucesso! ♡';
+                status.style.color = 'var(--accent-color)';
+                this.reset();
+            })
+            .catch((err) => {
+                status.textContent = 'Erro ao enviar. Tente novamente ou use o WhatsApp.';
+                status.style.color = '#ff6b6b';
+                console.error('EmailJS error:', err);
+            });
+        });
+
+        // =============================================
+        // Partículas
+        // =============================================
+        particlesJS('particles', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ff69b4' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: true },
+                size: { value: 5, random: true },
+                line_linked: { enable: true, distance: 150, color: '#e91e63', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 3, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+            },
+            interactivity: {
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
+            },
+            retina_detect: true
+        });
+
+        // =============================================
+        // Toggle modo claro/escuro
+        // =============================================
+        function toggleMode() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        // =============================================
+        // Animação de revelação ao scroll
+        // =============================================
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        sections.forEach(sec => observer.observe(sec));
+    </script>
+</body>
+</html>
