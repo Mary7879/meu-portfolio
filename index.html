@@ -3,32 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosemary - Desenvolvedora Full-Stack</title>
+    <title>Rosemary - Analista e Desenvolvedora de Sistemas</title>
 
     <!-- Fonte Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Seu CSS separado -->
+    <!-- CSS separado -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Botão toggle modo claro/escuro -->
-    <div class="mode-toggle" onclick="toggleMode()">Claro / Escuro</div>
 
     <!-- Hero -->
     <section id="hero">
         <div class="hero-content">
             <img 
                 src="img.jpg"
-                alt="foto.png.jpg"
+                alt="Foto de Rosemary Silva"
                 class="profile-photo"
             >
             <h1 class="animated-title">
-            <span>R</span><span>o</span><span>s</span><span>e</span><span>m</span><span>a</span><span>r</span><span>y</span>
+                <span>R</span><span>o</span><span>s</span><span>e</span><span>m</span><span>a</span><span>r</span><span>y</span>
                 <span> </span>
-                <span>s</span><span>i</span><span>l</span><span>v</span><span>a</span></h1>
-            <p class="subtitle">Formada em Análise e Desenvolvimento de Sistemas</p>
+                <span>S</span><span>i</span><span>l</span><span>v</span><span>a</span>
+            </h1>
+            <p class="subtitle">Analista e Desenvolvedora de Sistemas</p>
         </div>
     </section>
 
@@ -36,10 +34,10 @@
     <section id="sobre">
         <h2>Sobre Mim</h2>
         <p>
-            Desenvolvedora full-stack apaixonada por criar soluções modernas e funcionais.<br><br>
-            Com graduação em  Análise e Desenvolvimento de Sistemas e pós-graduação em engenharia de software,
-             gosto de unir código limpo, design intuitivo e boas práticas de desenvolvimento.<br><br>
-            Atualmente focada em tecnologias como React, Node.js, JavaScript/TypeScript e bancos de dados relacionais e não relacionais.
+            Profissional com foco em suporte técnico eficiente, análise de sistemas e desenvolvimento de soluções digitais que resolvem problemas reais e otimizam processos.<br><br>
+            Combino graduação em Análise e Desenvolvimento de Sistemas + pós-graduação em Engenharia de Software (cursando) com base prática em programação (Java, Python, SQL), bancos de dados, criação de sites responsivos e habilidades transferíveis de ambientes operacionais e administrativos: precisão em processos, resolução rápida de incidentes, organização, atendimento ao cliente e trabalho em equipe sob pressão.<br><br>
+            Atualmente atuo na criação de sites e me mantenho em constante atualização com tecnologias entry-level e tendências de TI.<br><br>
+            Em busca de oportunidades entry-level em suporte técnico ou analista de sistemas, para contribuir com diagnóstico ágil de problemas, automação de tarefas, suporte ao usuário de alta qualidade e projetos inovadores que gerem eficiência operacional, satisfação do cliente e impacto mensurável na organização.
         </p>
     </section>
 
@@ -52,7 +50,6 @@
             <div class="skill">Node.js • Express</div>
             <div class="skill">SQL • MongoDB</div>
             <div class="skill">Git • GitHub</div>
-            <div class="skill">UI/UX • Figma</div>
         </div>
     </section>
 
@@ -62,15 +59,11 @@
         <div class="projects-grid">
             <div class="project">
                 <h3>Loja de Doces Online</h3>
-                <p>E-commerce completo com carrinho, integração PagSeguro e armazenamento Firebase.</p>
+                <p>E-commerce completo com carrinho e integração de pagamento.</p>
             </div>
             <div class="project">
                 <h3>Portfolio Animado</h3>
-                <p>Site pessoal interativo com partículas, animações e modo claro/escuro.</p>
-            </div>
-            <div class="project">
-                <h3>Sistema de Gerenciamento</h3>
-                <p>Aplicação full-stack para controle de tarefas/estoque com autenticação.</p>
+                <p>Site pessoal interativo com partículas, animações e design responsivo.</p>
             </div>
         </div>
     </section>
@@ -79,77 +72,55 @@
     <section id="contato">
         <h2>Entre em Contato</h2>
 
-        <p id="form-status" class="form-status"></p>
-
         <p class="whatsapp-text">
-            fale comigo diretamente no WhatsApp:  
+            Fale comigo diretamente no WhatsApp:  
             <a href="https://wa.me/5538999444481?text=Oi%20Rosemary!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar%20sobre%20projetos%20ou%20oportunidades.%20%F0%9F%8C%9F" 
                target="_blank" class="whatsapp-link">
                 Abrir WhatsApp
+            </a>
+        </p>
+
+        <p class="download-cv">
+            Baixe meu currículo completo em PDF:
+            <a href="curriculo/Rosemary-Ferreira-Analise-Sistemas.pdf" 
+               download="Curriculo_Rosemary_Ferreira.pdf" 
+               class="download-btn">
+                Download Currículo (PDF)
             </a>
         </p>
     </section>
 
     <!-- Rodapé -->
     <footer>
-        <p>© 2026 Rosemary - Desenvolvedora Full-Stack</p>
+        <p>© 2026 Rosemary - Analista e Desenvolvedora de Sistemas</p>
         <a href="https://wa.me/5538999444481?text=Oi%20Rosemary!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar%20sobre%20projetos%20ou%20oportunidades.%20%F0%9F%8C%9F" 
            target="_blank" class="whatsapp-footer">
             Falar no WhatsApp
+        </a>
+        <a href="curriculo/Rosemary-Ferreira-Analise-Sistemas.pdf" 
+           download="Curriculo_Rosemary_Ferreira.pdf" 
+           class="download-footer">
+            Baixar Currículo
         </a>
     </footer>
 
     <!-- Partículas de fundo -->
     <div id="particles"></div>
 
-    <!-- Bibliotecas -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Biblioteca particles.js -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <script>
-        // =============================================
-        // EmailJS - Configuração (substitua os valores)
-        // =============================================
-        emailjs.init({
-            publicKey: "SUA_PUBLIC_KEY_AQUI",
-        });
-
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const status = document.getElementById('form-status');
-            status.textContent = 'Enviando...';
-            status.style.color = 'var(--accent-color)';
-
-            emailjs.sendForm(
-                'SEU_SERVICE_ID_AQUI',     // ← seu Service ID
-                'SEU_TEMPLATE_ID_AQUI',    // ← seu Template ID
-                this
-            )
-            .then(() => {
-                status.textContent = 'Mensagem enviada com sucesso! ♡';
-                status.style.color = 'var(--accent-color)';
-                this.reset();
-            })
-            .catch((err) => {
-                status.textContent = 'Erro ao enviar. Tente novamente ou use o WhatsApp.';
-                status.style.color = '#ff6b6b';
-                console.error('EmailJS error:', err);
-            });
-        });
-
-        // =============================================
-        // Partículas
-        // =============================================
+        // Partículas em tons suaves de rosa, marrom e verde
         particlesJS('particles', {
             particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: '#ff69b4' },
+                number: { value: 60, density: { enable: true, value_area: 800 } },
+                color: { value: ['#ffb6c1', '#c19a6b', '#a8d5ba'] },
                 shape: { type: 'circle' },
                 opacity: { value: 0.5, random: true },
-                size: { value: 5, random: true },
-                line_linked: { enable: true, distance: 150, color: '#e91e63', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 3, direction: 'none', random: true, straight: false, out_mode: 'out', bounce: false }
+                size: { value: 4, random: true },
+                line_linked: { enable: true, distance: 180, color: '#c19a6b', opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 2.5, direction: 'none', random: true, straight: false, out_mode: 'out' }
             },
             interactivity: {
                 events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
@@ -157,16 +128,7 @@
             retina_detect: true
         });
 
-        // =============================================
-        // Toggle modo claro/escuro
-        // =============================================
-        function toggleMode() {
-            document.body.classList.toggle('light-mode');
-        }
-
-        // =============================================
         // Animação de revelação ao scroll
-        // =============================================
         const sections = document.querySelectorAll('section');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -180,3 +142,4 @@
     </script>
 </body>
 </html>
+
