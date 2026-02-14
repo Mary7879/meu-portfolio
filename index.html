@@ -8,37 +8,48 @@
     <!-- Fonte Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- CSS separado -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Hero -->
+    <!-- Hero com foto à esquerda + nome e sobre à direita -->
     <section id="hero">
-        <div class="hero-content">
-            <img 
-                src="img.jpg"
-                alt="Foto de Rosemary Silva"
-                class="profile-photo"
-            >
-            <h1 class="animated-title">
-                <span>R</span><span>o</span><span>s</span><span>e</span><span>m</span><span>a</span><span>r</span><span>y</span>
-                <span> </span>
-                <span>S</span><span>i</span><span>l</span><span>v</span><span>a</span>
-            </h1>
-            <p class="subtitle">Analista e Desenvolvedora de Sistemas</p>
-        </div>
-    </section>
+        <div class="hero-container">
+            <!-- Foto no canto esquerdo -->
+            <div class="profile-left">
+                <img 
+                    src="img.jpg"
+                    alt="Foto de Rosemary Silva"
+                    class="profile-photo"
+                >
+            </div>
 
-    <!-- Sobre -->
-    <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>
-            Profissional com foco em suporte técnico eficiente, análise de sistemas e desenvolvimento de soluções digitais que resolvem problemas reais e otimizam processos.<br><br>
-            Combino graduação em Análise e Desenvolvimento de Sistemas + pós-graduação em Engenharia de Software (cursando) com base prática em programação (Java, Python, SQL), bancos de dados, criação de sites responsivos e habilidades transferíveis de ambientes operacionais e administrativos: precisão em processos, resolução rápida de incidentes, organização, atendimento ao cliente e trabalho em equipe sob pressão.<br><br>
-            Atualmente atuo na criação de sites e me mantenho em constante atualização com tecnologias entry-level e tendências de TI.<br><br>
-            Em busca de oportunidades entry-level em suporte técnico ou analista de sistemas, para contribuir com diagnóstico ágil de problemas, automação de tarefas, suporte ao usuário de alta qualidade e projetos inovadores que gerem eficiência operacional, satisfação do cliente e impacto mensurável na organização.
-        </p>
+            <!-- Conteúdo à direita: nome, subtítulo e sobre mim logo abaixo -->
+            <div class="profile-right">
+                <h1 class="animated-title">
+                    <span>R</span><span>o</span><span>s</span><span>e</span><span>m</span><span>a</span><span>r</span><span>y</span>
+                    <span> </span>
+                    <span>S</span><span>i</span><span>l</span><span>v</span><span>a</span>
+                </h1>
+                
+                <p class="subtitle">Analista e Desenvolvedora de Sistemas</p>
+
+                <!-- Sobre Mim bem próximo do subtítulo -->
+                <div class="sobre-section">
+                    <h2>Sobre Mim</h2>
+                    <p>
+                        Profissional com foco em suporte técnico eficiente, análise de sistemas e desenvolvimento de soluções digitais que resolvem problemas reais e otimizam processos.<br><br>
+                        Combino graduação em Análise e Desenvolvimento de Sistemas + pós-graduação em Engenharia de Software (cursando) com base prática em programação (Java, Python, SQL), bancos de dados, criação de sites responsivos e habilidades transferíveis de ambientes operacionais e administrativos: precisão em processos, resolução rápida de incidentes, organização, atendimento ao cliente e trabalho em equipe sob pressão.<br><br>
+                        Atualmente atuo na criação de sites e me mantenho em constante atualização com tecnologias entry-level e tendências de TI.<br><br>
+                        Em busca de oportunidades entry-level em suporte técnico ou analista de sistemas, para contribuir com diagnóstico ágil de problemas, automação de tarefas, suporte ao usuário de alta qualidade e projetos inovadores que gerem eficiência operacional, satisfação do cliente e impacto mensurável na organização.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Habilidades -->
@@ -60,10 +71,12 @@
             <div class="project">
                 <h3>Loja de Doces Online</h3>
                 <p>E-commerce completo com carrinho e integração de pagamento.</p>
+                <a href="https://brigaderia.netlify.app" target="_blank" rel="noopener noreferrer" class="project-btn">Ver Projeto</a>
             </div>
             <div class="project">
                 <h3>Portfolio Animado</h3>
                 <p>Site pessoal interativo com partículas, animações e design responsivo.</p>
+                <a href="https://portfolio-rosemarydev.netlify.app" target="_blank" rel="noopener noreferrer" class="project-btn">Ver Projeto</a>
             </div>
         </div>
     </section>
@@ -82,7 +95,7 @@
 
         <p class="download-cv">
             Baixe meu currículo completo em PDF:
-            <a href="curriculo/Rosemary-Ferreira-Analise-Sistemas.pdf" 
+            <a href="curriculo/Rosemary Ferreira-ANALISE DE SISTEMAS.pdf" 
                download="Curriculo_Rosemary_Ferreira.pdf" 
                class="download-btn">
                 Download Currículo (PDF)
@@ -93,15 +106,18 @@
     <!-- Rodapé -->
     <footer>
         <p>© 2026 Rosemary - Analista e Desenvolvedora de Sistemas</p>
-        <a href="https://wa.me/5538999444481?text=Oi%20Rosemary!%20Vi%20seu%20portfolio%20e%20gostaria%20de%20conversar%20sobre%20projetos%20ou%20oportunidades.%20%F0%9F%8C%9F" 
-           target="_blank" class="whatsapp-footer">
-            Falar no WhatsApp
-        </a>
-        <a href="curriculo/Rosemary-Ferreira-Analise-Sistemas.pdf" 
-           download="Curriculo_Rosemary_Ferreira.pdf" 
-           class="download-footer">
-            Baixar Currículo
-        </a>
+        
+        <div class="social-links">
+            <a href="https://www.instagram.com/rosyssilv?igsh=MTlsOWgwb2ttcGF2bw==" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rosemary-silva-34310a250" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/Marydev" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
     </footer>
 
     <!-- Partículas de fundo -->
@@ -111,16 +127,16 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 
     <script>
-        // Partículas em tons suaves de rosa, marrom e verde
+        // Partículas em tons suaves (marrom e verde)
         particlesJS('particles', {
             particles: {
-                number: { value: 60, density: { enable: true, value_area: 800 } },
-                color: { value: ['#ffb6c1', '#c19a6b', '#a8d5ba'] },
+                number: { value: 50, density: { enable: true, value_area: 800 } },
+                color: { value: ['#8b5e3c', '#81c784', '#6d4c41'] },
                 shape: { type: 'circle' },
-                opacity: { value: 0.5, random: true },
+                opacity: { value: 0.4, random: true },
                 size: { value: 4, random: true },
-                line_linked: { enable: true, distance: 180, color: '#c19a6b', opacity: 0.3, width: 1 },
-                move: { enable: true, speed: 2.5, direction: 'none', random: true, straight: false, out_mode: 'out' }
+                line_linked: { enable: true, distance: 160, color: '#8b5e3c', opacity: 0.3, width: 1 },
+                move: { enable: true, speed: 2, direction: 'none', random: true, straight: false, out_mode: 'out' }
             },
             interactivity: {
                 events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
